@@ -1,0 +1,188 @@
+<html>
+  <head>
+    @import url(https://fonts.googleapis.com/css?family=Raleway:400,500);
+
+  body{
+    background-color : #FFFFE0 ;
+    font-family : 'Raleway', Helvetice, sans-serif;
+    text-align : center ;
+    width : 100% ;
+  }
+
+  #title{
+    font-weight : bold ;
+  }
+
+  #container{
+    width : 50% ;
+    background-color : white ;
+    margin: 30px auto ;
+    padding-top: 50px ;
+    padding-bottom: 50px ;
+    font-family: 'Raleway', sans-serif, georgia;
+    font-size: 20px ;
+    line-height: 40px ;
+  }
+
+  .rowTab{
+    display: grid;
+    grid-template-columns: 45% 55% ;
+    grid-column-gap: 3%;
+  }
+
+  .labels{
+    text-align: right;
+    padding-left: 30px ;
+  }
+  .rightTab{
+    text-align: left; 
+    margin-bottom: 10px;
+  }
+
+  .input-field{
+    height: 30px;
+    font-family: times ;
+    font-size: 18px ;
+    padding-left: 5px ;
+  }
+
+  #dropdown{
+    height: 35px;
+    font-family: times ;
+    font-size: 20px ;
+    padding-left: 5px ;
+  }
+
+  .radio,.mul-selection{
+    line-height: 30px;
+    margin-left: -40px;
+    position: relative ;
+    display: block ;
+
+  }
+
+  .sele,
+  input[type="checkbox"] {
+    float: left;
+    margin-right: 5px;
+  }
+
+  label{
+    font-weight: normal ;
+  }
+
+  .Writein{
+    font-size: 15px ;
+    font-family: times ;
+    width: 55% ;
+    height: 70px ;
+    resize: vertical;
+    padding-left: 5px;
+  }
+
+  .finalButton{
+    background-color: rgb(255 228 181); 
+    font-weight: bold;
+    color: grey;
+    height: 40px;
+    width: 96px;
+    margin: 10px;
+    border: 0px solid;
+  }
+
+  </head>
+
+  <body>
+  <h1 id="title">Survey Form</h1>
+  <div id="container">
+    <p id="description">Let us know how we can improve freeCodeCamp</p>
+  
+    <form id="survey-form" action="https://www.freecodecamp.org/" method="GET">
+      
+     <div class="rowTab">
+       <div class="labels"><label id="name-label" for="name">* Name:</label></div>
+       <div class="rightTab"><input autofocus type="text" name="name" id="name" class="input-field" placeholder="Enter your name" required></div>
+     </div>
+    
+    <div class="rowTab">
+      <div class="labels"><label id="email-label" for="email">* Email:</label></div>
+      <div class="rightTab"><input autofocus name="email" id="email" type="text" class="input-field" placeholder="Enter your Email" required></div>
+    </div>
+      
+     <div class="rowTab">
+       <div class="labels"><label id="age-label" for="age">* Age:</label></div>
+       <div class="rightTab"><input type="number" min="1" max="125" class="input-field" placeholder="Age"></div>
+     </div>
+      
+     <div class="rowTab">    
+      <div class="labels"><label for="currentPos">Which option best describes your current role?</div>
+      <div class="rightTab"><select id="dropdown" name="currentPos" class="dropdown">
+        <option disabled value>Select an option</option>
+        <option value="Student">student</option>
+        <option value="Full Time Job">Full Time Job</option>
+        <option value="Full Time Learner">Full Time Learner</option>
+        <option value="Prefer not to say">Prefer not to say</option>
+        <option value="Other">Other</option>
+      </select>
+      </div>
+     </div>
+    
+     <div class="rowTab">
+       <div class="labels"><label for="userRating">* How likely is that you would recommend freeCodeCamp to a friend?</label></div>
+       <div class="rightTab">
+         <ul style="list-style:none;" class="userRating">
+          <li class="radio"><label><input name="radio-buttons" value="1" type="radio" >Definitely</label></li>
+          <li class="radio"><label><input name="radio-buttons" value="2" type="radio" >Maybe</label></li>
+          <li class="radio"><label><input name="radio-buttons" value="3" type="radio" >Not sure</label></li>
+        </ul> 
+       </div>
+    </div>  
+  
+  
+    <div class="rowTab">
+      <div class="labels"><label for="dropdown">What do you like most in FCC:</label></div>
+      <div class="rightTab">
+      <select name="dropdown" id="dropdown" placehlod="Select an option">
+        <option disabled value>Select an option</option>
+        <option name="challenges">Challenges</option>
+        <option name="projects">Projects</option>
+        <option name="community">Community</option>
+        <option name="opensource">Open Source</option>
+      </select>
+      </div>
+    </div>
+      
+    <div class="rowTab">
+      <div class="labels"><label for="skillsGet">Things that should be improved in the future (Check all that apply) :</label></div>
+      <div class="rightTab">
+        <ul class="skillsGet" style="list-style:none;">
+        <li class="mul-selection"><label><input type="checkbox" value="1" class="sele">Front-end Projects</label></li>
+        <li class="mul-selection"><label><input type="checkbox" value="2" class="sele">Back-end Projects</label></li>
+        <li class="mul-selection"><label><input type="checkbox" value="3" class="sele">Data Visualzation</label></li>
+        <li class="mul-selection"><label><input type="checkbox" value="4" class="sele">Challenges</label></li>
+        <li class="mul-selection"><label><input type="checkbox" value="5" class="sele">Open Source Community</label></li>
+        <li class="mul-selection"><label><input type="checkbox" value="6" class="sele">Gitter help rooms</label></li>
+        <li class="mul-selection"><label><input type="checkbox" value="7" class="sele">Videos</label></li>
+        <li class="mul-selection"><label><input type="checkbox" value="8" class="sele"><label>City Meetups</label></li>
+        <li class="mul-selection"><label><input type="checkbox" value="9" class="sele">Wiki</label></li>
+        <li class="mul-selection"><label><input type="checkbox" value="10" class="sele">Forum</label></li>
+        <li class="mul-selection"><label><input type="checkbox" value="10" class="sele">Additional Courses</label></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="rowTab">    
+      <div class="labels"><label for="Atextarea">Any Comments or Suggestions?</label></div>
+      <div class="rightTab">
+        <textarea class="Writein" name="Atextarea" placeholder="Enter your comment here..."></textarea>
+      </div>
+    </div>
+     
+    <div>
+      <input class="finalButton" type="submit" value="Submit">
+    </div>
+
+    </form>
+    </div>
+  </body>
+</html>
